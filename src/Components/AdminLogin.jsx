@@ -7,7 +7,7 @@ const AdminLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:5000/login/loginuser", {
+      const res = await fetch("https://memonson.onrender.com/login/loginuser", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -24,7 +24,7 @@ const AdminLogin = () => {
       // Save token in localStorage
       localStorage.setItem("adminToken", data.token);
       // Verify token immediately
-      const verifyRes = await fetch("http://localhost:5000/login/authverify", {
+      const verifyRes = await fetch("https://memonson.onrender.com/login/authverify", {
         method: "POST", // backend POST route
         headers: {
           "Content-Type": "application/json",
