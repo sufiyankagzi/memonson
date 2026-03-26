@@ -1,0 +1,54 @@
+.Toastify__toast {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.Toastify__toast--success {
+  background-color: #037014 !important;
+  color: white !important;
+}
+
+/* Make the entire toast (success type) dark background */
+.Toastify__toast--success {
+  background-color: #037014 !important;
+  color: #ffffff !important;
+}
+
+/* Force the icon (like checkmark) to white */
+.Toastify__toast--success .Toastify__toast-icon {
+  color: #ffffff !important;
+}
+
+/* Optional: Override the progress bar */
+.Toastify__progress-bar--success {
+  background: #ffffff !important; /* or any color you want */
+}
+
+.Toastify__toast--error {
+  background-color: #b00020 !important;
+  color: #ffffff !important;
+}
+
+.Toastify__toast--error .Toastify__toast-icon {
+  color: #ffffff !important;
+}
+
+.Toastify__progress-bar--error {
+  background: #ffffff !important;
+}
+
+/* This targets the icon inside error toasts */
+.Toastify__toast--error .Toastify__toast-icon svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.Toastify__close-button {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}

@@ -21,6 +21,8 @@ export default {
           light: '#ffff',
           btn: 'black',
           block: '#EEC64A',
+          brandstart: '#FF7F50',
+          brandend: '#FF4500',
         }
       }
       
