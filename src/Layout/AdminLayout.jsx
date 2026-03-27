@@ -1,24 +1,22 @@
-import Sidebar from "../Components/SidebarAdmin";
-import HeaderAdmin from "../Header/HeaderAdmin";
+import Sidebar from "../Components/Sidebar";
+import AdminHeader from '../Header/AdminHeader'
 import { Outlet } from "react-router-dom";
-import { Offcanvas } from "react-bootstrap";
 import { setCollapsed, toggleCollapsed } from "../store/Slices/SidebarSlice";
-import "./AdminLayout.css";
+
 
 const AdminLayout = () => {
   return (
-    <div className="">
-      {/* Sidebar - Desktop */}
-      <div className="">
+    <div className="flex min-h-screen">
+      <div className="w-64">
         <Sidebar />
       </div>
 
-      {/* Main content */}
-      <div className="">
-        <HeaderAdmin />
-        <div className="">
+      <div className="flex-1 flex flex-col">
+        <AdminHeader />
+        <div className="p-4 bg-white/80 flex-1">
           <Outlet />
         </div>
+
       </div>
     </div>
   );

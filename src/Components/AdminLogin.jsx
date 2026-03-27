@@ -21,7 +21,9 @@ const AdminLogin = () => {
 
       if (!res.ok) {
         const errMsg = data?.message || data?.data?.message || "Something went wrong";
-        alert(errMsg);
+        // alert(errMsg);
+        dispatch(showToast({ message: errMsg, type: "error" }))
+        
         return;
       }
 
@@ -39,19 +41,21 @@ const AdminLogin = () => {
       const verifyData = await verifyRes.json();
 
       if (verifyRes.ok && verifyData.status) {
-        alert("Login successful & token verified!");
+        // alert("Login successful & token verified!");
         dispatch(showToast({ message: "Login successful & token verified!", type: "success" }))
         // Redirect to admin dashboard
         // window.location.href = "/admin/dashboard";
         navigate("/admin/dashboard")
 
       } else {
-        alert("Token verification failed. Please login again.");
+        // alert("Token verification failed. Please login again.");
+        dispatch(showToast({ message: "Token verification failed. Please login again.", type: "error" }))
         localStorage.removeItem("adminToken");
       }
     } catch (err) {
       console.error(err);
-      alert("Something went wrong");
+      // alert("Something went wrong");
+      dispatch(showToast({ message: "Something went wrong", type: "error" }))
     }
   };
 

@@ -23,6 +23,10 @@ export default {
           block: '#EEC64A',
           brandstart: '#FF7F50',
           brandend: '#FF4500',
+          rimary: "#111827",   // sidebar bg
+      secondary: "#1f2937", // hover / card
+      accent: "#2563eb",    // blue highlight
+      text: "#e5e7eb",
         }
       }
       
